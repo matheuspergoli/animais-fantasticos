@@ -226,19 +226,22 @@ body {
   }
 }
 
-.js-tabcontent section {
+/* ANIMAÇÃO DA NAVEGAÇÃO POR TAB */
+.js-ativo .js-tabcontent section {
   display: none;
 }
 
 .js-tabcontent section.ativo {
   display: block;
-  animation: showContent 500ms forwards;
+  animation-name: showContent;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
 }
 
 @keyframes showContent {
   from {
     opacity: 0;
-    transform: translate3d(-30px, 0, 0);
+    transform: translate3d(-35px, 0, 0);
   }
 
   to {
