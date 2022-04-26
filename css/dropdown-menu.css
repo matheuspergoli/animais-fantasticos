@@ -1,0 +1,36 @@
+[data-dropdown] {
+  position: relative;
+}
+
+[data-dropdown] .dropdown-menu {
+  display: none;
+}
+
+[data-dropdown]:hover .dropdown-menu,
+[data-dropdown].active .dropdown-menu {
+  display: block;
+  animation: showMenu 300ms forwards;
+}
+
+.dropdown-menu {
+  position: absolute;
+  border: 2px solid #333;
+  background-color: #e54;
+  z-index: 200;
+}
+
+.dropdown-menu li:hover a {
+  color: white;
+}
+
+@keyframes showMenu {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
