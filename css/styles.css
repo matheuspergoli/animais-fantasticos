@@ -233,11 +233,11 @@ body {
 }
 
 /* ANIMAÇÃO DA NAVEGAÇÃO POR TAB */
-.js-ativo .js-tabcontent section {
+.js-ativo [data-tab="content"] section {
   display: none;
 }
 
-.js-tabcontent section.ativo {
+[data-tab="content"] section.ativo {
   display: block;
   animation-name: showContent;
   animation-duration: 500ms;
@@ -257,20 +257,20 @@ body {
 }
 
 /* ANIMAÇÃO ACCORDION LIST */
-.js-ativo .js-accordion dd {
+.js-ativo [data-anime="accordion"] dd {
   display: none;
 }
 
-.js-accordion dt::after {
+[data-anime="accordion"] dt::after {
   content: '⮧';
   margin-left: 10px;
 }
 
-.js-accordion dt.ativo::after {
+[data-anime="accordion"] dt.ativo::after {
   content: '⮥';
 }
 
-.js-accordion dd.ativo {
+[data-anime="accordion"] dd.ativo {
   display: block;
   animation-name: slideDown;
   animation-duration: 500ms;
@@ -290,13 +290,13 @@ body {
 }
 
 /* ANIMAÇÃO AO SCROLL */
-.js-ativo .js-scroll {
+.js-ativo [data-anime="scroll"] {
   opacity: 0;
   transition-duration: 300ms;
   transform: translate3d(-30px, 0, 0);
 }
 
-.js-ativo .js-scroll.ativo {
+.js-ativo [data-anime="scroll"].ativo {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }
