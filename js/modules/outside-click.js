@@ -6,7 +6,7 @@ export default function outsideClick(element, events, callback) {
     events.forEach(userEvent => {
       html.addEventListener('click', handleOutsideClick)
     })
-    element.setAttribute(outside)
+    element.setAttribute(outside, '')
   }
 
   function handleOutsideClick(event) {
